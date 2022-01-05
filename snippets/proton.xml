@@ -6,7 +6,9 @@
   <remote name="gitlab" fetch="https://gitlab.com" />
   <remote name="gitlab-ssh" fetch="ssh://git@gitlab.com" />
   <remote name="proton" fetch="https://github.com/ProtonAOSP" revision="sc" />
+  <remote name="proton-lavender" fetch="https://github.com/ProtonAOSP-lavender" revision="sc" />
   <remote name="proton-ssh" fetch="ssh://git@github.com/ProtonAOSP" revision="sc" />
+  <remote name="proton-lavender-ssh" fetch="ssh://git@github.com/ProtonAOSP-lavender" revision="sc" />
   <remote name="blobs" fetch="https://github.com/NeutronBlobs" revision="sc" />
   <remote name="blobs-ssh" fetch="ssh://git@github.com/NeutronBlobs" revision="sc" />
 
@@ -108,6 +110,8 @@
   <project name="android_hardware_qcom_sm7250_display" path="hardware/qcom/sm7250/display" remote="proton" groups="proton" />
   <remove-project name="platform/hardware/qcom/sm7250/media" />
   <project name="android_hardware_qcom_sm7250_media" path="hardware/qcom/sm7250/media" remote="proton" groups="proton" />
+  <remove-project name="platform/system/memory/lmkd" />
+  <project name="android_system_memory_lmkd" path="system/memory/lmkd" remote="proton" groups="proton" />
   <remove-project name="device/google/gs101" />
   <project name="android_device_google_gs101" path="device/google/gs101" remote="proton" groups="proton" />
   <remove-project name="device/google/gs101-sepolicy" />
@@ -150,4 +154,15 @@
   <project name="android_manifest" path="manifest" remote="proton" groups="proton" />
   <project name="android_vendor_lawnicons" path="vendor/lawnicons" remote="proton" groups="proton" />
   <project name="kdrag0n/android_packages_apps_RepainterServicePriv" path="packages/apps/RepainterServicePriv" remote="github" groups="proton" revision="main" />
+  
+  <!-- Track modified repositories -->
+  <project name="android_vendor_qcom_opensource_thermal" path="vendor/qcom/opensource/thermal-hal" remote="proton-lavender" revision="sc" />
+  <project name="android_kernel_build" path="device/qcom/kernelscripts" remote="proton-lavender" revision="sc" >
+    <linkfile dest="vendor/qcom/build/tasks/kernel_definitions.mk" src="kernel_definitions.mk"/>
+  </project>
+  <remove-project name="android_vendor_qcom_opensource_interfaces" />
+  <project name="android_vendor_qcom_opensource_interfaces" path="vendor/qcom/opensource/interfaces" remote="proton-lavender" revision="sc" />
+  <project name="android_vendor_qcom_opensource_data-ipa-cfg-mgr" path="vendor/qcom/opensource/data-ipa-cfg-mgr" remote="proton-lavender" revision="sc" />
+  <project name="android_vendor_qcom_opensource_dataservices" path="vendor/qcom/opensource/dataservices" remote="proton-lavender" revision="sc" />
+  <project name="android_vendor_codeaurora_telephony" path="vendor/codeaurora/commonsys/telephony" remote="proton-lavender" revision="sc" />
 </manifest>

@@ -1103,6 +1103,12 @@
 
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
 
-  <!-- ProtonAOSP changes -->
-  <include name="proton.xml"/>
+  <!-- ProtonAOSP snippet -->
+  <include name="snippets/proton.xml"/>
+
+  <!-- CAF snippet -->
+  <include name="snippets/caf.xml"/>
+
+  <!-- Obsolete snippet -->
+  <include name="snippets/obsolete.xml"/>
 </manifest>
