@@ -1109,6 +1109,9 @@
   <!-- CAF snippet -->
   <include name="snippets/caf.xml"/>
 
+  <!-- LineageOS snippet -->
+  <include name="snippets/lineage.xml"/>
+
   <!-- Obsolete snippet -->
   <include name="snippets/obsolete.xml"/>
 </manifest>
