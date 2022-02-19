@@ -21,7 +21,7 @@
   <remove-project name="platform/libcore" />
   <project name="android_libcore" path="libcore" remote="proton" groups="proton" />
   <remove-project name="platform/build" />
-  <project name="android_build_make" path="build/make" remote="proton" groups="proton">
+  <project name="android_build_make" path="build/make" remote="proton-lavender" groups="proton">
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -31,7 +31,7 @@
     <linkfile src="tools" dest="build/tools" />
   </project>
   <remove-project name="platform/build/soong" />
-  <project name="android_build_soong" path="build/soong" remote="proton" groups="proton">
+  <project name="android_build_soong" path="build/soong" remote="proton-lavender" groups="proton">
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
@@ -42,7 +42,7 @@
   <remove-project name="platform/system/core" />
   <project name="android_system_core" path="system/core" remote="proton" groups="proton" />
   <remove-project name="platform/system/sepolicy" />
-  <project name="android_system_sepolicy" path="system/sepolicy" remote="proton" groups="proton" />
+  <project name="android_system_sepolicy" path="system/sepolicy" remote="proton-lavender" groups="proton" />
   <remove-project name="platform/external/noto-fonts" />
   <project name="android_external_noto-fonts" path="external/noto-fonts" remote="proton" groups="proton" />
   <remove-project name="platform/external/roboto-fonts" />
@@ -52,9 +52,9 @@
   <remove-project name="platform/packages/apps/ThemePicker" />
   <project name="android_packages_apps_ThemePicker" path="packages/apps/ThemePicker" remote="proton" groups="proton" />
   <remove-project name="platform/packages/modules/Connectivity" />
-  <project name="android_packages_modules_Connectivity" path="packages/modules/Connectivity" remote="proton" groups="proton" />
+  <project name="android_packages_modules_Connectivity" path="packages/modules/Connectivity" remote="proton-lavender" groups="proton" />
   <remove-project name="platform/bionic" />
-  <project name="android_bionic" path="bionic" remote="proton" groups="proton" />
+  <project name="android_bionic" path="bionic" remote="proton-lavender" groups="proton" />
   <remove-project name="platform/packages/apps/WallpaperPicker2" />
   <project name="android_packages_apps_WallpaperPicker2" path="packages/apps/WallpaperPicker2" remote="proton" groups="proton" />
   <remove-project name="platform/packages/apps/Launcher3" />
@@ -97,6 +97,10 @@
   <project name="android_device_google_redbull-sepolicy" path="device/google/redbull-sepolicy" remote="proton" groups="proton" />
   <remove-project name="device/google/bramble" />
   <project name="android_device_google_bramble" path="device/google/bramble" remote="proton" groups="proton" />
+  <remove-project name="platform/hardware/google/pixel" />
+  <project name="android_hardware_google_pixel" path="hardware/google/pixel" remote="proton-lavender" groups="proton" />
+  <remove-project name="platform/hardware/libhardware" />
+  <project name="android_hardware_libhardware" path="hardware/libhardware" remote="proton-lavender" groups="proton" />
   <remove-project name="platform/hardware/qcom/sm8150/display" />
   <project name="android_hardware_qcom_sm8150_display" path="hardware/qcom/sm8150/display" remote="proton" groups="proton" />
   <remove-project name="platform/hardware/qcom/sm8150/data/ipacfg-mgr" />
@@ -110,6 +114,8 @@
   <project name="android_hardware_qcom_sm7250_display" path="hardware/qcom/sm7250/display" remote="proton" groups="proton" />
   <remove-project name="platform/hardware/qcom/sm7250/media" />
   <project name="android_hardware_qcom_sm7250_media" path="hardware/qcom/sm7250/media" remote="proton" groups="proton" />
+  <remove-project name="platform/hardware/qcom/wlan" />
+  <project name="android_hardware_qcom_wlan" path="hardware/qcom/wlan" remote="proton-lavender" groups="proton" />
   <remove-project name="platform/system/memory/lmkd" />
   <project name="android_system_memory_lmkd" path="system/memory/lmkd" remote="proton" groups="proton" />
   <remove-project name="device/google/gs101" />
@@ -126,7 +132,7 @@
   <project name="android_packages_providers_DownloadProvider" path="packages/providers/DownloadProvider" remote="proton" groups="proton" />
 
   <!-- Add new repositories -->
-  <project name="android_vendor_proton" path="vendor/proton" remote="proton" groups="proton" />
+  <project name="android_vendor_proton" path="vendor/proton" remote="proton-lavender" groups="proton" />
   <project name="android_packages_apps_ProtonWallpaperStub" path="packages/apps/ProtonWallpaperStub" remote="proton" groups="proton" />
   <project name="android_packages_apps_SimpleDeviceConfig" path="packages/apps/SimpleDeviceConfig" remote="proton" groups="proton" />
   <project name="android_packages_apps_Jelly" path="packages/apps/Jelly" remote="proton" groups="proton" />
@@ -143,7 +149,7 @@
   <project name="android_external_colorkt" path="external/colorkt" remote="proton" groups="proton" />
   <project name="android_tools_extract-utils" path="tools/extract-utils" remote="proton" groups="proton" />
   <project name="android_vendor_google" path="vendor/google" remote="blobs" groups="proton" />
-  <project name="ProtonAOSP/android_vendor_gapps" path="vendor/gapps" remote="gitlab" revision="sc" />
+  <project name="raiyanbinmohsin/android_vendor_gms" path="vendor/gms" remote="gitlab" revision="sc" />
   <project name="android_external_themelib" path="external/themelib" remote="proton" groups="proton" />
   <project name="android_vendor_qcom_opensource_commonsys-intf_display" path="vendor/qcom/opensource/commonsys-intf/display" remote="proton" groups="proton" />
   <project name="android_vendor_qcom_opensource_core-utils" path="vendor/qcom/opensource/core-utils" remote="proton" groups="proton" />
@@ -151,9 +157,12 @@
   <project name="android_external_zlib-ng" path="external/zlib-ng" remote="proton" groups="proton" />
   <project name="android_vendor_qcom_opensource_interfaces" path="vendor/qcom/opensource/interfaces" remote="proton" groups="proton" />
   <project name="android_external_libncurses" path="external/libncurses" remote="proton" groups="proton" />
-  <project name="android_manifest" path="manifest" remote="proton" groups="proton" />
+  <project name="android_manifest" path="manifest" remote="proton-lavender" groups="proton" />
   <project name="android_vendor_lawnicons" path="vendor/lawnicons" remote="proton" groups="proton" />
   <project name="kdrag0n/android_packages_apps_RepainterServicePriv" path="packages/apps/RepainterServicePriv" remote="github" groups="proton" revision="main" />
+  <project name="android_external_exfatprogs" path="external/exfatprogs" remote="proton-lavender" groups="proton" />
+  <project name="android_external_tinyxml" path="external/tinyxml" remote="proton-lavender" groups="proton" />
+  <project name="android_vendor_support" path="vendor/support" remote="proton-lavender" groups="proton" />
   
   <!-- Track modified repositories -->
   <project name="android_vendor_qcom_opensource_thermal" path="vendor/qcom/opensource/thermal-hal" remote="proton-lavender" revision="sc" />
